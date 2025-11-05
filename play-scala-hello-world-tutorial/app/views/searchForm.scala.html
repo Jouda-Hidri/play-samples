@@ -1,0 +1,14 @@
+@import helper._
+@(implicit request: play.api.mvc.RequestHeader)
+
+@main("Search Page") {
+<h1>Search</h1>
+
+@helper.form(action = routes.SearchController.submitSearch) {
+@CSRF.formField
+
+<label for="query">Enter search term:</label>
+<input type="text" id="query" name="query" placeholder="Search..." required>
+<button type="submit">Search</button>
+}
+}

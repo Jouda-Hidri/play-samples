@@ -29,5 +29,12 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def tutorial() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.tutorial())
   }
+
+  // TODO store string in map - follow hello world tutorial to transfer param, then store in map (update frequency)
+  // TODO create a tree
+  // TODO return top 5 from the tree
+
+  // TODO store in persistence
+  // TODO autocomplete (React ?)
   
 }
